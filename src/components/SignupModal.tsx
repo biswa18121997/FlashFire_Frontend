@@ -29,17 +29,17 @@ const SignupModal = () => {
 
   async function SaveDetailsToDB() {
     try {
-        let reqToServer = await fetch(`${API_BASE_URL}/`, {
+        let reqToServer = await fetch(`${API_BASE_URL}`, {
 
                               method: 'POST',
                               headers: { 'Content-Type': 'application/json' },
-                              body: JSON.stringify({name : formData.fullName,
-                                                    email: formData.email,
-                                                    mobile:formData.countryCode + formData.phone,
+                              body: JSON.stringify({name : formData?.fullName,
+                                                    email: formData?.email,
+                                                    mobile:formData?.countryCode + formData.phone,
                                                     workAuthorization: formData.workAuthorization})
                             })
                             console.log(formData.countryCode + formData.phone);
-        let responseFromServer = await reqToServer.json();
+        let responseFromServer = await reqToServer?.json();
         console.log("Response from server:", responseFromServer);
       
     } catch (error) {
@@ -241,7 +241,7 @@ const SignupModal = () => {
               {/* Calendar Section - Maximum Available Height */}
               <div className="bg-white overflow-hidden" style={{ height: 'calc(100vh - 100px)' }}>
                 <InlineWidget
-                  url='https://calendly.com/biswajitshrm6' //'https://calendly.com/adit-jain606/30min'   //"https://calendly.com/tripathipranjal01/flashfire"
+                  url='https://calendly.com/biswajitshrm6/meet-with-me' //'https://calendly.com/adit-jain606/30min'   //"https://calendly.com/tripathipranjal01/flashfire"
                   prefill={{
                     name: formData.fullName,
                     email: formData.email
@@ -340,7 +340,7 @@ const SignupModal = () => {
               {/* Calendar Section - 3 columns */}
               <div className="lg:col-span-3 bg-white">
                 <InlineWidget
-                  url='https://calendly.com/biswajitshrm6'  //'https://calendly.com/adit-jain606/30min' //"https://calendly.com/tripathipranjal01/flashfire"
+                  url='https://calendly.com/biswajitshrm6/meet-with-me'  //'https://calendly.com/adit-jain606/30min' //"https://calendly.com/tripathipranjal01/flashfire"
                   prefill={{
                     name: formData.fullName,
                     email: formData.email
