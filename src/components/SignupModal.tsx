@@ -16,14 +16,8 @@ const SignupModal = () => {
   });
 
   const countryCodes = [
-    { code: '+1', country: 'US/CA', pattern: /^1/ },
-    { code: '+91', country: 'India', pattern: /^91/ },
-    { code: '+44', country: 'UK', pattern: /^44/ },
-    { code: '+61', country: 'Australia', pattern: /^61/ },
-    { code: '+49', country: 'Germany', pattern: /^49/ },
-    { code: '+33', country: 'France', pattern: /^33/ },
-    { code: '+86', country: 'China', pattern: /^86/ },
-    { code: '+81', country: 'Japan', pattern: /^81/ }
+    { code: '+1', country: 'USA', pattern: /^1/ },
+    { code: '+91', country: 'India', pattern: /^91/ }
   ];
 
   const closeModal = () => {
